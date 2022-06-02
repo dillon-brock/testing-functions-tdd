@@ -79,3 +79,13 @@ export function formatName(first, last, middle = '') {
         return 'invalid name';
     }
 }
+
+export function petObject(name, type, age, food, toys) {
+    return {
+        name,
+        type,
+        age,
+        food,
+        toys
+    };
+}

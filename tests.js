@@ -7,7 +7,8 @@ import {
     sumLessThan100,
     oddOrEven,
     rockPaperScissors,
-    formatName
+    formatName,
+    petObject
 } from './functions.js';
 
 const test = QUnit.test;
@@ -220,6 +221,12 @@ test('formats a name', (expect) => {
 
     Uses: object literal syntax, deepEqual assertion
 */
+
+test('object factory function', (expect) => {
+
+    expect.deepEqual(petObject('felix', 'cat', 6, 'tuna', ['feather chaser', 'laser pointer', 'ball of yarn']), { name: 'felix', type: 'cat', age: 6, food: 'tuna', toys: ['feather chaser', 'laser pointer', 'ball of yarn'] });
+
+});
 
 /*
     Write a function that takes a number
