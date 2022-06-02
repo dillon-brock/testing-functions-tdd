@@ -4,7 +4,8 @@ import {
     subtract,
     convertToSeconds,
     triangleArea,
-    sumLessThan100
+    sumLessThan100,
+    oddOrEven
 } from './functions.js';
 
 const test = QUnit.test;
@@ -133,6 +134,23 @@ test ('finds if sum of two numbers is less than 100', (expect) => {
 
     Uses: modulo operator (remainder), comparison operator, if/else control flow
 */
+
+test('finds if a number is odd or even', (expect) => {
+
+    const oddNum = 3;
+    const expectedOdd = 'odd';
+
+    const actualOdd = oddOrEven(oddNum);
+
+    expect.equal(expectedOdd, actualOdd);
+
+    const evenNum = 6;
+    const expectedEven = 'even';
+
+    const actualEven = oddOrEven(evenNum);
+
+    expect.equal(expectedEven, actualEven);
+});
 
 /* 
     Write a function that takes two rock-paper-scissors throws

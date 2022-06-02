@@ -18,3 +18,7 @@ export function triangleArea(b, h) {
 export function sumLessThan100(a, b) {
     return add(a, b) < 100;
 }
+
+export function oddOrEven(num) {
+    return num % 2 === 0 ? 'even' : 'odd';
+}
