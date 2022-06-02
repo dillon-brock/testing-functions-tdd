@@ -12,7 +12,8 @@ import {
     factorial,
     listPets,
     countCats,
-    countPetType
+    countPetType,
+    countDays
 } from './functions.js';
 
 const test = QUnit.test;
@@ -320,3 +321,12 @@ test('count pet types in array', (expect) => {
     number of days for Feb. The default value for the year should be
     the current year
 */
+
+test('return number of days in a month', (expect) => {
+
+    expect.equal(countDays(1), 31);
+    expect.equal(countDays(2), 28);
+    expect.equal(countDays(4), 30);
+    expect.equal(countDays(15), undefined);
+
+});

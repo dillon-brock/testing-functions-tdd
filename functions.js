@@ -133,3 +133,25 @@ export function countPetType(arr, petType) {
     return count;
 
 }
+
+export function countDays(month) {
+
+    let monthsWith31Days = [1, 3, 5, 7, 8, 10, 12];
+    let monthsWith30Days = [4, 6, 9, 11];
+
+    if (month >= 1 && month <= 12) {
+        if (monthsWith31Days.includes(month)) {
+            return 31;
+        }
+        else if (monthsWith30Days.includes(month)) {
+            return 30;
+        }
+        else {
+            return 28;
+        }
+    }
+    else {
+        console.log('please enter a number between 1 and 12 for the month');
+    }
+
+}
