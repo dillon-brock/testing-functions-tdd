@@ -8,7 +8,8 @@ import {
     oddOrEven,
     rockPaperScissors,
     formatName,
-    petObject
+    petObject,
+    factorial
 } from './functions.js';
 
 const test = QUnit.test;
@@ -224,7 +225,13 @@ test('formats a name', (expect) => {
 
 test('object factory function', (expect) => {
 
-    expect.deepEqual(petObject('felix', 'cat', 6, 'tuna', ['feather chaser', 'laser pointer', 'ball of yarn']), { name: 'felix', type: 'cat', age: 6, food: 'tuna', toys: ['feather chaser', 'laser pointer', 'ball of yarn'] });
+    expect.deepEqual(petObject('felix', 'cat', 6, 'tuna', ['feather chaser', 'laser pointer', 'ball of yarn']), {
+        name: 'felix',
+        type: 'cat',
+        age: 6,
+        food: 'tuna',
+        toys: ['feather chaser', 'laser pointer', 'ball of yarn']
+    });
 
 });
 
@@ -236,6 +243,12 @@ test('object factory function', (expect) => {
 
     Uses: let variable with reassignment, math operator, for...i loop
 */
+
+test('provides factorial of a number', (expect) => {
+
+    expect.equal(factorial(4), 10);
+
+});
 
 /*
     Write a function that takes name of three pets
