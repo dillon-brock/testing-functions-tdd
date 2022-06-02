@@ -3,7 +3,8 @@ import {
     add,
     subtract,
     convertToSeconds,
-    triangleArea
+    triangleArea,
+    sumLessThan100
 } from './functions.js';
 
 const test = QUnit.test;
@@ -103,6 +104,25 @@ test('finds area of a triangle', (expect) => {
 
     Uses: Comparison operator(s), if/else control flow
 */
+
+test ('finds if sum of two numbers is less than 100', (expect) => {
+
+    const trueNum1 = 25;
+    const trueNum2 = 13;
+    const expectedTrue = true;
+
+    const actualTrue = sumLessThan100(trueNum1, trueNum2);
+
+    expect.equal(actualTrue, expectedTrue);
+
+    const falseNum1 = 88;
+    const falseNum2 = 60;
+    const expectedFalse = false;
+
+    const actualFalse = sumLessThan100(falseNum1, falseNum2);
+
+    expect.equal(expectedFalse, actualFalse);
+});
 
 /* 
     Write a function that takes a number and

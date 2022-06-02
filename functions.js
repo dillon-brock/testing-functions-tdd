@@ -14,3 +14,7 @@ export function convertToSeconds(minutes) {
 export function triangleArea(b, h) {
     return 0.5 * b * h;
 }
+
+export function sumLessThan100(a, b) {
+    return add(a, b) < 100;
+}
