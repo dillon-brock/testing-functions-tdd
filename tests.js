@@ -1,7 +1,8 @@
 // IMPORT MODULES under test here:
 import {
     add,
-    subtract
+    subtract,
+    convertToSeconds
 } from './functions.js';
 
 const test = QUnit.test;
@@ -59,6 +60,16 @@ test('subtracts two numbers', (expect) => {
 
     Uses: Math operator(s)
 */
+
+test('converts minutes to seconds', (expect) => {
+
+    const minutes = 10;
+    const expected = 600;
+
+    const actual = convertToSeconds(minutes);
+
+    expect.equal(actual, expected);
+});
 
 /* 
     Write a function that takes in the base and height
