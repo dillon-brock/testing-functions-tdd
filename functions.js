@@ -119,3 +119,17 @@ export function countCats(arr) {
 
     return cats;
 }
+
+export function countPetType(arr, petType) {
+
+    let count = 0;
+
+    for (const element of arr) {
+        if (element === petType) {
+            count++;
+        }
+    }
+
+    return count;
+
+}
