@@ -6,7 +6,8 @@ import {
     triangleArea,
     sumLessThan100,
     oddOrEven,
-    rockPaperScissors
+    rockPaperScissors,
+    formatName
 } from './functions.js';
 
 const test = QUnit.test;
@@ -196,6 +197,14 @@ test('players draw', (expect) => {
     Uses: let variable with reassignment, string concatenation, 
     existence comparison operator, if control flow
 */
+
+test('formats a name', (expect) => {
+    
+    expect.equal(formatName('Ruth', 'Ginsburg'), 'Ruth Ginsburg');
+    expect.equal(formatName('Ruth', 'Ginsburg', 'Bader'), 'Ruth Bader Ginsburg');
+    expect.equal(formatName(27, 'Ginsburg'), 'invalid name');
+    expect.equal(formatName('Ruth', 'Ginsburg', 42), 'invalid name');
+});
 
 /* 
     Write a function that takes a name, type, age, food, and a toys array

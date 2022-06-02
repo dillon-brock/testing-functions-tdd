@@ -64,3 +64,18 @@ export function rockPaperScissors(throw1, throw2) {
     }
     return winner;
 }
+
+export function formatName(first, last, middle = '') {
+
+    if (typeof first === 'string' && typeof last === 'string' && typeof middle === 'string') {
+        if (middle) {
+            return `${first} ${middle} ${last}`;
+        }
+        else {
+            return `${first} ${last}`;
+        }
+    }
+    else {
+        return 'invalid name';
+    }
+}
