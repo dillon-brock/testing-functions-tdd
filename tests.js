@@ -10,7 +10,8 @@ import {
     formatName,
     petObject,
     factorial,
-    listPets
+    listPets,
+    countCats
 } from './functions.js';
 
 const test = QUnit.test;
@@ -272,6 +273,13 @@ test('creates an array of pet names', (expect) => {
 
     Uses: let variable with reassignment, math operator, for...of loop
 */
+
+test('counts cats in array', (expect) => {
+
+    expect.equal(countCats(['cat', 'dog', 'bird', 'cat', 'cat']), 3);
+
+});
+
 
 /*
     BONUS: Write a function that takes an array of pet types ('cat', 'dog', 'bird')

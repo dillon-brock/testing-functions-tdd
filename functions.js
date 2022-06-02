@@ -106,3 +106,16 @@ export function listPets(name1, name2, name3) {
     return [name1, name2, name3];
 
 }
+
+export function countCats(arr) {
+
+    let cats = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === 'cat') {
+            cats++;
+        }
+    }
+
+    return cats;
+}
