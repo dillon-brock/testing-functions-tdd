@@ -100,3 +100,9 @@ export function factorial(num) {
 
     return sum;
 }
+
+export function listPets(name1, name2, name3) {
+
+    return [name1, name2, name3];
+
+}

@@ -9,7 +9,8 @@ import {
     rockPaperScissors,
     formatName,
     petObject,
-    factorial
+    factorial,
+    listPets
 } from './functions.js';
 
 const test = QUnit.test;
@@ -258,6 +259,10 @@ test('provides factorial of a number', (expect) => {
 
     Uses: array literal syntax, deepEqual assertion 
 */
+
+test('creates an array of pet names', (expect) => {
+    expect.deepEqual(listPets('felix', 'fido', 'alex'), ['felix', 'fido', 'alex']);
+});
 
 /*
     Write a function that takes an array of pet types ('cat', 'dog', 'bird')
