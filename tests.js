@@ -5,7 +5,8 @@ import {
     convertToSeconds,
     triangleArea,
     sumLessThan100,
-    oddOrEven
+    oddOrEven,
+    rockPaperScissors
 } from './functions.js';
 
 const test = QUnit.test;
@@ -166,6 +167,24 @@ test('finds if a number is odd or even', (expect) => {
 
     Uses: comparison operator, if/else control flow
 */
+
+test('player 1 wins', (expect) => {
+    expect.equal(rockPaperScissors('rock', 'scissors'), 'player 1');
+    expect.equal(rockPaperScissors('paper', 'rock'), 'player 1');
+    expect.equal(rockPaperScissors('scissors', 'paper'), 'player 1');
+});
+
+test('player 2 wins', (expect) => {
+    expect.equal(rockPaperScissors('rock', 'paper'), 'player 2');
+    expect.equal(rockPaperScissors('paper', 'scissors'), 'player 2');
+    expect.equal(rockPaperScissors('scissors', 'rock'), 'player 2');
+});
+
+test('players draw', (expect) => {
+    expect.equal(rockPaperScissors('rock', 'rock'), 'draw');
+    expect.equal(rockPaperScissors('paper', 'paper'), 'draw');
+    expect.equal(rockPaperScissors('scissors', 'scissors'), 'draw');
+});
 
 /* 
     Write a function that takes in a first, last, and a third optional

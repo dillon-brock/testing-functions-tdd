@@ -16,9 +16,51 @@ export function triangleArea(b, h) {
 }
 
 export function sumLessThan100(a, b) {
-    return add(a, b) < 100;
+    return a + b < 100;
 }
 
 export function oddOrEven(num) {
     return num % 2 === 0 ? 'even' : 'odd';
+}
+
+export function rockPaperScissors(throw1, throw2) {
+    let winner = '';
+    if (throw1 === throw2) {
+        winner = 'draw';
+    }
+    else {
+        switch (throw1) {
+            case 'rock':
+                switch (throw2) {
+                    case 'paper':
+                        winner = 'player 2';
+                        break;
+                    case 'scissors':
+                        winner = 'player 1';
+                        break;
+                }
+                break;
+            case 'paper':
+                switch (throw2) {
+                    case 'rock':
+                        winner = 'player 1';
+                        break;
+                    case 'scissors':
+                        winner = 'player 2';
+                        break;
+                }
+                break;
+            case 'scissors':
+                switch (throw2) {
+                    case 'rock':
+                        winner = 'player 2';
+                        break;
+                    case 'paper':
+                        winner = 'player 1';
+                        break;
+                }
+                break;
+        }
+    }
+    return winner;
 }
